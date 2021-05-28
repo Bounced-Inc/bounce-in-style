@@ -1,0 +1,41 @@
+{
+  "name": "bounce-in-style",
+  "version": "1.0.0",
+  "description": "The Bounce style guide, formatter, and commit validator.",
+  "main": "dist/index.js",
+  "bin": {
+    "bis": "dist/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bounced-Inc/bounce-in-style.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bounced-Inc/bounce-in-style/issues"
+  },
+  "homepage": "https://github.com/Bounced-Inc/bounce-in-style#readme",
+  "lint-staged": {
+    "*.{js,ts}": [
+      "npx prettier --write",
+      "eslint --cache --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "eslint": "^7.27.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0"
+  }
+}
