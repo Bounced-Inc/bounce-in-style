@@ -1,10 +1,7 @@
 {
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
-  "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended"
-  ],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   "rules": {
     "quotes": ["warn", "single", { "avoidEscape": true }],
     "eqeqeq": "error",
@@ -12,6 +9,11 @@
     "prefer-const": "error",
     "prefer-arrow-callback": "error",
     "no-trailing-spaces": "error",
-    "no-restricted-properties": "error"
+    "no-restricted-properties": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  },
+  "env": {
+    "browser": true, // this needs to be only included with react projects
+    "node": true
   }
 }

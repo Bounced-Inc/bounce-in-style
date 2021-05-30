@@ -1,14 +1,12 @@
 {
   "name": "bounce-in-style",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "The Bounce style guide, formatter, and commit validator.",
   "main": "dist/index.js",
   "bin": {
     "bis": "dist/index.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Bounced-Inc/bounce-in-style.git"
@@ -20,9 +18,8 @@
   },
   "homepage": "https://github.com/Bounced-Inc/bounce-in-style#readme",
   "lint-staged": {
-    "*.{js,ts}": [
-      "npx prettier --write",
-      "eslint --cache --fix"
+    "*.{js,jsx,ts,tsx}": [
+      "./fix.sh"
     ]
   },
   "husky": {
@@ -36,6 +33,7 @@
     "eslint": "^7.27.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
-    "prettier": "^2.3.0"
+    "prettier": "^2.3.0",
+    "typescript": "^4.3.2"
   }
 }
