@@ -18,26 +18,23 @@ The Bounce style guide, formatter, and commit validator.
 
 # Instructions
 
-- Install bounce-in-style and husky
+- Fresh install of Husky (version 6 has some major changes)
 
 ```bash
-# with npm
-npm install bounce-in-style husky -D
-
-# with yarn
-yarn add bounce-in-style husky -D
+npm install husky -D
+npx husky install
 ```
 
-- Add husky config to `package.json`
+- Install bounce-in-style
 
-```json
-{
-  "husky": {
-    "hooks": {
-      "pre-commit": "npx bis"
-    }
-  }
-}
+```bash
+npm install bounce-in-style -D
+```
+
+- Add git hook with Husky
+
+```bash
+npx husky add .husky/pre-commit "npx bis"
 ```
 
 - Add your own `.eslintignore` and `.prettierignore` files to the root of your project.
