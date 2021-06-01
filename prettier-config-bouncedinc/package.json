@@ -1,0 +1,11 @@
+{
+  "name": "prettier-config-bouncedinc",
+  "version": "0.0.1",
+  "description": "The Bounce Prettier config",
+  "main": "index.json",
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "prettier": ">= 2"
+  }
+}
