@@ -3,19 +3,14 @@
 const lintStaged = require('lint-staged');
 
 (async () => {
-  try {
-    const success = await lintStaged({
-      config: {
-        "*.{js,jsx,ts,tsx}": [
-          "npx prettier --config ./node_modules/prettier-config-bouncedinc/index.json --write",
-          "npx eslint -c ./node_modules/eslint-config-bouncedinc/index.js --cache --fix"
-        ]
-      }
-    });
+  const success = await lintStaged({
+    config: {
+      '*.{js,jsx,ts,tsx}': [
+        'npx prettier --config ./node_modules/prettier-config-bouncedinc/index.json --write',
+        'npx eslint -c ./node_modules/eslint-config-bouncedinc/index.js --cache --fix'
+      ]
+    }
+  });
 
-    console.log(success ? "Format and lint was successful 🏀" : 'Linting failed!');
-  } catch (err) {
-    // Failed to load configuration
-    throw err;
-  }
+  console.log(success ? 'Format and lint was successful 🏀' : 'Formatting failed!');
 })();
