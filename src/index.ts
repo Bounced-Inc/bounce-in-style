@@ -13,7 +13,7 @@ const lintStaged = require('lint-staged');
       }
     });
 
-    console.log(success ? 'Format and lint was successful 🏀' : 'Linting failed!');
+    console.log(success ? "Format and lint was successful 🏀" : 'Linting failed!');
   } catch (e) {
     // Failed to load configuration
     console.error(e);
