@@ -13,9 +13,9 @@ const lintStaged = require('lint-staged');
       }
     });
 
-    console.log(success ? "Format and lint was successful 🏀" : 'Linting failed!');
-  } catch (e) {
+    console.log(success ? "Format and lint was successful 🏀" : "Linting failed!");
+  } catch (err) {
     // Failed to load configuration
-    console.error(e);
+    throw err;
   }
 })();
