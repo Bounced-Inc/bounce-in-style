@@ -21,6 +21,11 @@
   },
   "homepage": "https://github.com/Bounced-Inc/bounce-in-style#readme",
   "prettier": "prettier-config-bouncedinc",
+  "husky": {
+    "hooks": {
+      "pre-commit": "node ./dist/index.js"
+    }
+  },
   "dependencies": {
     "eslint-config-bouncedinc": "^0.0.2",
     "eslint-config-bouncedinc-react": "^0.0.2",
@@ -31,6 +36,7 @@
   },
   "devDependencies": {
     "@types/node": "^15.6.1",
+    "husky": "^6.0.0",
     "typescript": "^4.3.2"
   },
   "files": [

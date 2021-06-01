@@ -28,7 +28,7 @@ npm install bounce-in-style husky -D
 yarn add bounce-in-style husky -D
 ```
 
-- Add husky to `package.json`
+- Add husky config to `package.json`
 
 ```json
 {
