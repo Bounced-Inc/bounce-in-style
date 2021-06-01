@@ -13,7 +13,7 @@ The Bounce style guide, formatter, and commit validator.
 
 - test current setup in terms of linting / formatting
 - try adding airbnb extends (optional, or later)
-- setup cli to run: `bis { --staged | --all } { --react }`. get inspiration from https://github.com/google/gts
+- setup cli to run: `bis { --staged | --all } { --react }`
 - setup commit validator & changelog generator
 
 # Instructions
@@ -39,3 +39,5 @@ yarn add bounce-in-style husky -D
   }
 }
 ```
+
+- Add your own `.eslintignore` and `.prettierignore` files to the root of your project.
