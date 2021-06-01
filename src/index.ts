@@ -6,7 +6,7 @@ const lintStaged = require('lint-staged');
   try {
     const success = await lintStaged({
       config: {
-        '*.{js,jsx,ts,tsx}': [
+        "*.{js,jsx,ts,tsx}": [
           "npx prettier --config ./node_modules/prettier-config-bouncedinc --write",
           "npx eslint -c ./node_modules/eslint-config-bouncedinc --cache --fix"
         ]
