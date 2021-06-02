@@ -23,12 +23,13 @@
   "homepage": "https://github.com/Bounced-Inc/bounce-in-style#readme",
   "prettier": "prettier-config-bouncedinc",
   "dependencies": {
+    "arg": "^5.0.0",
+    "eslint": "^7.27.0",
     "eslint-config-bouncedinc": "^0.0.2",
     "eslint-config-bouncedinc-react": "^0.0.2",
-    "prettier-config-bouncedinc": "^0.0.1",
-    "eslint": "^7.27.0",
     "lint-staged": "^11.0.0",
-    "prettier": "^2.3.0"
+    "prettier": "^2.3.0",
+    "prettier-config-bouncedinc": "^0.0.1"
   },
   "devDependencies": {
     "@types/node": "^15.6.1",
