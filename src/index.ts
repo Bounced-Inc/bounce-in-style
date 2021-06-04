@@ -60,7 +60,7 @@ async function runCli() {
     execSync(eslintCommand + ' .', { stdio: 'inherit' });
   }
 
-  console.log('Formating and linting was successful 🏀');
+  console.log('Formating and linting done 🚀');
 }
 
 // catch block removes the unhandled promise rejection warning
