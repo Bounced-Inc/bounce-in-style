@@ -4,7 +4,7 @@ import { execSync } from 'child_process';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const lintStaged = require('lint-staged');
 
-(async () => {
+async function runCli() {
   const args = arg({
     // Types
     '--react': Boolean,
@@ -17,10 +17,10 @@ const lintStaged = require('lint-staged');
 
   if (args['--help']) {
     console.log(`
-Usage
+  Usage
   $ npx bis [flags]
-
-Options
+  
+  Options
   --help        Print help message.
   --react       Use for React & React Native projects.
   --staged      Only run on staged files. Useful when adding as a git hook.
@@ -35,8 +35,7 @@ Options
   const isCheck = args['--check'];
 
   if (isStagedChanges && isCheck) {
-    console.error('Cannot provide the --staged and the --check flag together');
-    return;
+    throw new Error('Cannot provide the --staged and the --check flag together');
   }
 
   const prettierCommand =
@@ -46,24 +45,26 @@ Options
   }/index.js ${isCheck ? '' : '--fix'} --cache --ext ts --ext tsx --ext js --ext jsx`;
 
   if (isStagedChanges) {
-    await lintStaged({
+    const success = await lintStaged({
       config: {
         '*.{js,jsx,ts,tsx}': [prettierCommand, eslintCommand],
         '*.{json,css,md,yml,yaml}': [prettierCommand]
       }
     });
+
+    if (!success) throw new Error('lint-staged failed');
   } else {
     // append "." for files to format and lint
     if (!isCheck) execSync(prettierCommand + ' .', { stdio: 'inherit' });
 
-    try {
-      // errors already get printed automatically, we dont need to
-      // print more
-      execSync(eslintCommand + ' .', { stdio: 'inherit' });
-    } catch (err) {
-      return;
-    }
+    execSync(eslintCommand + ' .', { stdio: 'inherit' });
   }
 
   console.log('Formating and linting was successful 🏀');
-})();
+}
+
+// catch block removes the unhandled promise rejection warning
+runCli().catch((err) => {
+  console.error(err.message);
+  process.exit(1);
+});
