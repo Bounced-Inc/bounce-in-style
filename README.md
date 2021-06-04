@@ -10,11 +10,21 @@ The Bounce style guide, formatter, and commit validator.
 
 # Instructions
 
-- Fresh install of Husky (version 6 has some major changes)
+- Fresh install of Husky (version 6 has some major changes, ensure to remove existing Husky installations prior to starting)
 
 ```bash
 npm install husky -D
 npx husky install
+```
+
+- Add this "prepare" script to package.json so that husky gets setup on `npm install`:
+
+```json
+{
+  "scripts": {
+    "prepare": "husky install"
+  }
+}
 ```
 
 - Install bounce-in-style
@@ -33,9 +43,9 @@ npx husky add .husky/pre-commit "npx bis --staged --react"
 npx husky add .husky/pre-commit "npx bis --staged"
 ```
 
-- Add your own `.eslintignore` and `.prettierignore` files to the root of your project.
+- You can add your own `.eslintignore` and `.prettierignore` files to your project root to chose which files get linted and formatted.
 
-# Extending eslint config
+# Extending ESlint config
 
 We don't recommend extending the config, instead a PR should be made into this repo to add the change for everyone.
 
