@@ -9,7 +9,10 @@ module.exports = {
     'prefer-const': 'error',
     'prefer-arrow-callback': 'error',
     'no-restricted-properties': 'error',
-    '@typescript-eslint/explicit-module-boundary-types': 'off'
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    // TODO: we should try to move off of this
+    '@typescript-eslint/no-explicit-any': 'off'
   },
   env: {
     node: true
