@@ -7,6 +7,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-config-bouncedinc": "^0.0.3",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0"

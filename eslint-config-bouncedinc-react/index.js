@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['eslint-config-bouncedinc', 'plugin:react/recommended'],
+  extends: ['eslint-config-bouncedinc', 'plugin:react/recommended', 'airbnb'],
   rules: {
     'react/react-in-jsx-scope': 0,
     'react/display-name': 0,
@@ -26,6 +26,7 @@ module.exports = {
     ],
     'no-case-declarations': 0
   },
+  plugins: ['react', 'react-hooks'],
   env: {
     browser: true,
     es6: true,
