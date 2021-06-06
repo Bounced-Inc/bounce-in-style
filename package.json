@@ -26,6 +26,7 @@
     "eslint": "^7.27.0",
     "eslint-config-bouncedinc": "^0.0.3",
     "eslint-config-bouncedinc-react": "^0.0.3",
+    "eslint-config-bouncedinc-react-native": "^0.0.1",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.0",
     "prettier-config-bouncedinc": "^0.0.2"

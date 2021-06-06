@@ -6,12 +6,15 @@ const lintStaged = require('lint-staged');
 
 async function runCli() {
   const args = arg({
-    // Types
     '--react': Boolean,
+    '-r': '--react',
+    '--react-native': Boolean,
+    '-n': '--react-native',
     '--staged': Boolean,
-    '--help': Boolean,
+    '-s': '--staged',
     '--check': Boolean,
-    // Aliases
+    '-c': '--check',
+    '--help': Boolean,
     '-h': '--help'
   });
 
@@ -21,29 +24,40 @@ async function runCli() {
   $ npx bis [flags]
   
   Options
-  --help        Print help message.
-  --react       Use for React & React Native projects.
-  --staged      Only run on staged files. Useful when adding as a git hook.
-  --check       Only check files. Skips running Prettier and doesn't use the --fix flag for ESLint. 
-                This option does not support the --staged flag.
+  --help               Print help message.
+  -r, --react          Use for React projects.
+  -n, --react-native   Use for React Native projects.
+  -s, --staged         Only run on staged files. Useful when adding as a git hook.
+  -c, --check          Only check files. Skips running Prettier and doesn't use the --fix flag for ESLint. 
+                       This option does not support the --staged flag.
   `);
     return;
   }
 
   const isStagedChanges = args['--staged'];
   const isReact = args['--react'];
+  const isReactNative = args['--react-native'];
   const isCheck = args['--check'];
 
   if (isStagedChanges && isCheck) {
-    throw new Error('Cannot provide the --staged and the --check flag together');
+    throw new Error(
+      'Cannot provide the --staged and the --check flag together'
+    );
+  }
+
+  if (isReact && isReactNative) {
+    throw new Error('Cannot use both react and react native config');
   }
 
   const prettierCommand =
     'npx prettier --config ./node_modules/prettier-config-bouncedinc/index.json --write';
   const eslintCommand = `npx eslint -c ./node_modules/eslint-config-bouncedinc${
-    isReact ? '-react' : ''
-  }/index.js ${isCheck ? '' : '--fix'} --cache --ext ts --ext tsx --ext js --ext jsx`;
+    isReactNative ? '-react-native' : isReact ? '-react' : ''
+  }/index.js ${
+    isCheck ? '' : '--fix'
+  } --cache --ext ts --ext tsx --ext js --ext jsx`;
 
+  console.log(eslintCommand);
   if (isStagedChanges) {
     const success = await lintStaged({
       config: {
