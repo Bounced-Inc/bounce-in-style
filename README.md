@@ -73,12 +73,16 @@ npx bis -h
 #                        This option does not support the --staged flag.
 ```
 
-# Extending ESlint config
+# Bounce project recommendations
 
-We don't recommend extending the config when using internal to Bounce, instead a PR should be made into this repo to add the change for everyone.
+### Running `tsc`
 
-If you do need to extend the config, you can treat it like any other eslint config. The simplest way to do so can be seen in the `.eslintrc` file at the root of this repo.
+All Bounce projects should have a git hook (either pre-commit or pre-push) for running `tsc`.
 
-## What's next
+### Extending ESLint config
+
+We don't recommend extending the config when using internal to Bounce, instead a PR should be made into this repo to add the change for everyone. If you do need to extend the config, you can treat it like any other eslint config. The simplest way to do so can be seen in the `.eslintrc` file at the root of this repo.
+
+# What's next
 
 - [ ] Setup commit validator & changelog generator
