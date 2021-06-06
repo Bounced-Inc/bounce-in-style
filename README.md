@@ -53,5 +53,4 @@ If you need to extend the config, you can extend it like you would any other esl
 
 ## What's next
 
-- try adding airbnb extends
 - setup commit validator & changelog generator
