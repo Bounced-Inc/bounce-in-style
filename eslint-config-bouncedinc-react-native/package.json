@@ -8,7 +8,7 @@
   "license": "ISC",
   "dependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
-    "eslint-config-bouncedinc": "^0.0.3"
+    "eslint-config-bouncedinc-react": "^0.0.5"
   },
   "peerDependencies": {
     "eslint": ">= 7",
