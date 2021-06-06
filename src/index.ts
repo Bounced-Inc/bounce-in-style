@@ -66,10 +66,14 @@ async function runCli() {
       }
     });
 
-    if (!success) throw new Error('lint-staged failed');
+    if (!success) {
+      throw new Error('lint-staged failed');
+    }
   } else {
     // append "." for files to format and lint
-    if (!isCheck) execSync(prettierCommand + ' .', { stdio: 'inherit' });
+    if (!isCheck) {
+      execSync(prettierCommand + ' .', { stdio: 'inherit' });
+    }
 
     execSync(eslintCommand + ' .', { stdio: 'inherit' });
   }
