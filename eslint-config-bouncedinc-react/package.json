@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bouncedinc-react",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "The Bounce ESLint config for React Typescript projects",
   "main": "index.js",
   "scripts": {},
@@ -8,7 +8,7 @@
   "license": "ISC",
   "dependencies": {
     "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-bouncedinc": "^0.0.3",
+    "eslint-config-bouncedinc": "^0.0.4",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0"
   },
