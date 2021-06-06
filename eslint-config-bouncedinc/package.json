@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bouncedinc",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The Bounce ESLint config for general Typescript projects",
   "main": "index.js",
   "scripts": {},
@@ -8,7 +8,9 @@
   "license": "ISC",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.26.0",
-    "@typescript-eslint/parser": "^4.26.0"
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
   },
   "peerDependencies": {
     "eslint": ">= 7"
