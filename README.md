@@ -8,11 +8,27 @@ The Bounce style guide, formatter, and commit validator.
 - Minimal config
 - Compatible with all Bounce Typescript projects (Express, React, React Native)
 
-# Instructions
+# Install
+
+- Remove any installations of ESLint or Prettier & all associated config files (keep your `.eslintignore` and `.prettierignore` files)
+- Install with npm
+
+```bash
+# npm
+npm install bounce-in-style -D
+
+# yarn
+yarn add bounce-in-style -D
+```
+
+# Usage
+
+## Git/Husky hook (recommended)
 
 - Fresh install of Husky (version 6 has some major changes, ensure to remove existing Husky installations prior to starting)
 
 ```bash
+npm uninstall husky
 npm install husky -D
 npx husky install
 ```
@@ -27,30 +43,42 @@ npx husky install
 }
 ```
 
-- Install bounce-in-style
-
-```bash
-npm install bounce-in-style -D
-```
-
 - Add git hook with Husky
 
 ```bash
-# react/react-native projects
+# react projects
 npx husky add .husky/pre-commit "npx bis --staged --react"
+
+# react-native projects
+npx husky add .husky/pre-commit "npx bis --staged --react-native"
 
 # all other projects (ie backend)
 npx husky add .husky/pre-commit "npx bis --staged"
 ```
 
-- You can add your own `.eslintignore` and `.prettierignore` files to your project root to chose which files get linted and formatted.
+## CLI
+
+```bash
+npx bis -h
+
+# Usage
+#   $ npx bis [flags]
+
+#   Options
+#   --help               Print help message.
+#   -r, --react          Use for React projects.
+#   -n, --react-native   Use for React Native projects.
+#   -s, --staged         Only run on staged files. Useful when adding as a git hook.
+#   -c, --check          Only check files. Skips running Prettier and doesn't use the --fix flag for ESLint.
+#                        This option does not support the --staged flag.
+```
 
 # Extending ESlint config
 
-We don't recommend extending the config, instead a PR should be made into this repo to add the change for everyone.
+We don't recommend extending the config when using internal to Bounce, instead a PR should be made into this repo to add the change for everyone.
 
-If you need to extend the config, you can extend it like you would any other eslint config. The simplest way to do so can be seen in the `.eslintrc` file at the root of this repo.
+If you do need to extend the config, you can treat it like any other eslint config. The simplest way to do so can be seen in the `.eslintrc` file at the root of this repo.
 
 ## What's next
 
-- setup commit validator & changelog generator
+- [ ] Setup commit validator & changelog generator
