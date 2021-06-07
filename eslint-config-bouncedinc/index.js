@@ -25,17 +25,21 @@ module.exports = {
     'no-await-in-loop': 'off',
     'no-param-reassign': 'off',
     'no-underscore-dangle': 'off',
+    'implicit-arrow-linebreak': 'off',
     'func-names': 'off',
     radix: 'off',
     'class-methods-use-this': 'off',
     'no-plusplus': 'off',
-    'no-restricted-globals': ['off', 'isNaN'],
+    curly: 'off',
 
     // handled by @typescript-eslint
     'no-unused-vars': 'off',
 
     // handled by prettier
     'max-len': 'off',
+    'object-curly-newline': 'off',
+    indent: 'off',
+    'operator-linebreak': 'off',
 
     // handled by ts
     'no-undef': 'off',
@@ -43,7 +47,6 @@ module.exports = {
     'no-redeclare': 'off',
     'default-case': 'off',
 
-    'operator-linebreak': 'off',
     'prefer-const': 'error',
     'prefer-arrow-callback': 'error',
     'no-restricted-properties': 'error',
@@ -52,9 +55,24 @@ module.exports = {
     // TODO: this would be nice to tighten up
     'brace-style': 'off',
     // TODO: we should try to move `any` to `unknown`
-    '@typescript-eslint/no-explicit-any': 'off'
+    '@typescript-eslint/no-explicit-any': 'off',
+    // TODO: we should remove this / only use it for isNaN
+    'no-restricted-globals': 'off'
   },
   env: {
     node: true
-  }
+  },
+  overrides: [
+    {
+      files: ['**/*.test.*'],
+      env: {
+        jest: true
+      },
+      // "extends": ["plugin:jest/recommended"] // Can't extend in overrides: https://github.com/eslint/eslint/issues/8813
+      plugins: ['jest'],
+      rules: {
+        'jest/no-disabled-tests': 'warn'
+      }
+    }
+  ]
 };
