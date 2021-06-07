@@ -24,9 +24,9 @@
   "dependencies": {
     "arg": "^5.0.0",
     "eslint": "^7.27.0",
-    "eslint-config-bouncedinc": "^0.0.6",
-    "eslint-config-bouncedinc-react": "^0.0.9",
-    "eslint-config-bouncedinc-react-native": "^0.0.6",
+    "eslint-config-bouncedinc": "^0.0.7",
+    "eslint-config-bouncedinc-react": "^0.0.10",
+    "eslint-config-bouncedinc-react-native": "^0.0.7",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.0",
     "prettier-config-bouncedinc": "^0.0.2"
