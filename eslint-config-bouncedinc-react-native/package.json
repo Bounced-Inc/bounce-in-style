@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bouncedinc-react-native",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "The Bounce ESLint config for React Native Typescript projects",
   "main": "index.js",
   "scripts": {},
