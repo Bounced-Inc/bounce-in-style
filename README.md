@@ -1,5 +1,9 @@
 # Bounce in Style
 
+[![Version](https://img.shields.io/npm/v/bounce-in-style.svg)](https://npmjs.org/package/bounce-in-style)
+[![npm](https://img.shields.io/npm/dt/bounce-in-style)](https://www.npmjs.com/package/bounce-in-style)
+[![License](https://img.shields.io/npm/l/bounce-in-style.svg)](https://github.com/Bounced-Inc/bounce-in-style/blob/master/package.json)
+
 The Bounce style guide, formatter, and commit validator.
 
 # Goal
