@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bouncedinc",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "The Bounce ESLint config for general Typescript projects",
   "main": "index.js",
   "scripts": {},
