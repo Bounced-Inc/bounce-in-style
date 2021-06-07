@@ -28,6 +28,7 @@ module.exports = {
     'func-names': 'off',
     radix: 'off',
     'class-methods-use-this': 'off',
+    'no-plusplus': 'off',
 
     // handled by @typescript-eslint
     'no-unused-vars': 'off',
@@ -49,7 +50,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     // TODO: this would be nice to tighten up
     'brace-style': 'off',
-    // TODO: we should try to move off of this
+    // TODO: we should try to move `any` to `unknown`
     '@typescript-eslint/no-explicit-any': 'off'
   },
   env: {
