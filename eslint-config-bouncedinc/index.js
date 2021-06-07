@@ -29,6 +29,7 @@ module.exports = {
     radix: 'off',
     'class-methods-use-this': 'off',
     'no-plusplus': 'off',
+    'no-restricted-globals': ['off', 'isNaN'],
 
     // handled by @typescript-eslint
     'no-unused-vars': 'off',
