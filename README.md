@@ -47,7 +47,7 @@ npx husky install
 }
 ```
 
-- Add git hook with Husky
+- Add git hook with Husky (replace `npx` with `yarn` if using yarn)
 
 ```bash
 # react projects
@@ -63,7 +63,11 @@ npx husky add .husky/pre-commit "npx bis --staged"
 ## CLI
 
 ```bash
+# with npm
 npx bis -h
+
+# with yarn
+yarn bis -h
 
 # Usage
 #   $ npx bis [flags]
@@ -90,3 +94,4 @@ We don't recommend extending the config when using internal to Bounce, instead a
 # What's next
 
 - [ ] Setup commit validator & changelog generator
+- [ ] Add [eslint-plugin-cypress](https://www.npmjs.com/package/eslint-plugin-cypress) to react config
