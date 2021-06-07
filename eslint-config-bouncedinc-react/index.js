@@ -1,8 +1,8 @@
 module.exports = {
   extends: ['eslint-config-bouncedinc', 'plugin:react/recommended', 'airbnb'],
   rules: {
-    'react/react-in-jsx-scope': 0,
-    'react/display-name': 0,
+    // 'react/react-in-jsx-scope': 0,
+    // 'react/display-name': 0,
     'react/prop-types': 0,
     // '@typescript-eslint/camelcase': 0,
     // '@typescript-eslint/explicit-function-return-type': 0,
