@@ -4,6 +4,8 @@ module.exports = {
     // TODO: would be nice to remove this, import blocks at the top of files can get long and hard to navigate if they arent organized
     // but it would be more ideal to have this handled by a formatter
     'import/order': 'off',
+    // TODO: this should be removed, but we have way too many prop destructures that do this
+    'no-shadow': 'off',
 
     // TODO: properties that are also in base, find a way to not override these by accident
     // 'indent': 'off',
@@ -51,5 +53,10 @@ module.exports = {
     browser: true,
     es6: true,
     node: true
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {} // this loads <rootdir>/tsconfig.json to eslint
+    }
   }
 };
