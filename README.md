@@ -47,7 +47,7 @@ npx husky install
 }
 ```
 
-- Add git hook with Husky (replace `npx` with `yarn` if using yarn)
+- Add git hook with Husky
 
 ```bash
 # react projects
@@ -65,9 +65,6 @@ npx husky add .husky/pre-commit "npx bis --staged"
 ```bash
 # with npm
 npx bis -h
-
-# with yarn
-yarn bis -h
 
 # Usage
 #   $ npx bis [flags]
