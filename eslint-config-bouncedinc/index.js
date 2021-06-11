@@ -64,9 +64,13 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.test.*'],
+      files: [
+        '**/*.{spec,test}.{js,jsx,ts,tsx}',
+        '**/__{mocks,tests}__/**/*.{js,ts,tsx}'
+      ],
       env: {
-        jest: true
+        jest: true,
+        'jest/globals': true
       },
       // "extends": ["plugin:jest/recommended"] // Can't extend in overrides: https://github.com/eslint/eslint/issues/8813
       plugins: ['jest'],
