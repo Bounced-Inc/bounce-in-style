@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-console */
 import arg from 'arg';
 import { execSync } from 'child_process';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -49,15 +50,18 @@ async function runCli() {
     throw new Error('Cannot use both react and react native config');
   }
 
-  const prettierCommand =
-    'npx prettier --config ./node_modules/prettier-config-bouncedinc/index.json --write';
-  const eslintCommand = `npx eslint -c ./node_modules/eslint-config-bouncedinc${
-    isReactNative ? '-react-native' : isReact ? '-react' : ''
-  }/index.js ${
+  let eslintConfigSuffix = '';
+  if (isReactNative) eslintConfigSuffix += '-react-native';
+  else if (isReact) eslintConfigSuffix += '-react';
+
+  const eslintFlags = `${
     isCheck ? '' : '--fix'
   } --cache --ext ts --ext tsx --ext js --ext jsx`;
 
-  console.log(eslintCommand);
+  const prettierCommand =
+    'npx prettier --config ./node_modules/prettier-config-bouncedinc/index.json --write';
+  const eslintCommand = `npx eslint -c ./node_modules/eslint-config-bouncedinc${eslintConfigSuffix}/index.js ${eslintFlags}`;
+
   if (isStagedChanges) {
     const success = await lintStaged({
       config: {
@@ -72,13 +76,12 @@ async function runCli() {
   } else {
     // append "." for files to format and lint
     if (!isCheck) {
-      execSync(prettierCommand + ' .', { stdio: 'inherit' });
+      execSync(`${prettierCommand} .`, { stdio: 'inherit' });
     }
 
-    execSync(eslintCommand + ' .', { stdio: 'inherit' });
+    execSync(`${eslintCommand} .`, { stdio: 'inherit' });
+    console.log('Formating and linting done 🚀');
   }
-
-  console.log('Formating and linting done 🚀');
 }
 
 // catch block removes the unhandled promise rejection warning
