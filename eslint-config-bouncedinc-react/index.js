@@ -49,11 +49,7 @@ module.exports = {
     'prefer-destructuring': 'off',
     'jsx-a11y/media-has-caption': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
-    'jsx-a11y/iframe-has-title': 'off',
-
-    // warnings
-    'react/no-did-update-set-state': 'warn',
-    'react/jsx-props-no-spreading': 'warn'
+    'jsx-a11y/iframe-has-title': 'off'
 
     // disabled rules from previous eslint web config
     // 'react/display-name': 0,
@@ -82,7 +78,7 @@ module.exports = {
   // rules that we turn off for old js code
   overrides: [
     {
-      files: ['**/*.js'],
+      files: ['**/*.js', '**/*.jsx'],
       rules: {
         'react/forbid-prop-types': 'off',
         'react/destructuring-assignment': 'off',
@@ -95,6 +91,11 @@ module.exports = {
         'jsx-a11y/interactive-supports-focus': 'off',
         'no-unused-expressions': 'off',
         'jsx-a11y/label-has-associated-control': 'off',
+
+        // these two shouldnt be allowed, but we have a lot of old code that works well and has these warnings
+        'react/no-did-update-set-state': 'off',
+        'react/jsx-props-no-spreading': 'off',
+
         // this is a copy of airbnbs version, with the ForOfStatement rule removed
         'no-restricted-syntax': [
           'error',
