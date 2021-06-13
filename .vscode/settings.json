@@ -1,0 +1,11 @@
+{
+  "eslint.validate": [
+    "typescript",
+    "javascript",
+    "typescriptreact",
+    "javascriptreact"
+  ],
+  "eslint.options": {
+    "configFile": "./node_modules/eslint-config-bouncedinc/index.js"
+  }
+}

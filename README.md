@@ -80,6 +80,14 @@ npx bis -h
 
 # Bounce project recommendations
 
+### VSCode
+
+To add linting capabilities to VSCode
+
+- copy the `.vscode` folder at the root of your project
+- (if using React) replace the `configFile` path with `./node_modules/eslint-config-bouncedinc-react/index.js`
+- (if using React Native) replace the `configFile` path with `./node_modules/eslint-config-bouncedinc-react-native/index.js`
+
 ### Running `tsc`
 
 All Bounce projects should have a git hook (either pre-commit or pre-push) for running `tsc`.
