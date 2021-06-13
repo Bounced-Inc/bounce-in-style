@@ -31,7 +31,6 @@ module.exports = {
     'import/no-named-as-default-member': 'off',
     '@typescript-eslint/explicit-member-accessibility': 0,
     '@typescript-eslint/member-delimiter-style': 0,
-    'prefer-destructuring': 'off',
     'jsx-a11y/media-has-caption': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/iframe-has-title': 'off'

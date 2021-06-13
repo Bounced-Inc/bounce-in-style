@@ -31,6 +31,7 @@ module.exports = {
     'class-methods-use-this': 'off',
     'no-plusplus': 'off',
     curly: 'off',
+    'prefer-destructuring': 'off',
 
     // handled by @typescript-eslint
     'no-unused-vars': 'off',
