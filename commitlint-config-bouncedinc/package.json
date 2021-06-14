@@ -1,0 +1,19 @@
+{
+  "name": "commitlint-config-bouncedinc",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "dependencies": {
+    "conventional-changelog-conventionalcommits": "^4.3.1"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "@commitlint/cli": ">= 12",
+    "@commitlint/config-conventional": ">= 12"
+  },
+  "license": "ISC"
+}
