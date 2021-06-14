@@ -49,7 +49,7 @@ npx husky install
 
 - Add git hook with Husky
 
-Lint and format
+> Lint and format
 
 ```bash
 # react projects
@@ -62,10 +62,10 @@ npx husky add .husky/pre-commit "npx bis --staged --react-native"
 npx husky add .husky/pre-commit "npx bis --staged"
 ```
 
-Commit validation
+> Commit validation
 
 ```bash
-npx husky add .husky/commit-msg "npx commitlint --edit "$1"  --config ./node_modules/commitlint-config-bouncedinc/index.js"
+ npx husky add .husky/commit-msg "npx commitlint --edit \"\$1\" --config ./node_modules/commitlint-config-bouncedinc/index.js"
 ```
 
 ## CLI
@@ -85,10 +85,6 @@ npx bis -h
 #   -c, --check          Only check files. Skips running Prettier and doesn't use the --fix flag for ESLint.
 #                        This option does not support the --staged flag.
 ```
-
-## Commit linting
-
-`npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'`
 
 # Bounce project recommendations
 
