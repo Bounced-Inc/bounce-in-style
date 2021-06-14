@@ -49,6 +49,8 @@ npx husky install
 
 - Add git hook with Husky
 
+Lint and format
+
 ```bash
 # react projects
 npx husky add .husky/pre-commit "npx bis --staged --react"
@@ -58,6 +60,12 @@ npx husky add .husky/pre-commit "npx bis --staged --react-native"
 
 # all other projects (ie backend)
 npx husky add .husky/pre-commit "npx bis --staged"
+```
+
+Commit validation
+
+```bash
+npx husky add .husky/commit-msg "npx commitlint --edit "$1"  --config ./node_modules/commitlint-config-bouncedinc/index.js"
 ```
 
 ## CLI
