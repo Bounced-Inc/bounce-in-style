@@ -78,6 +78,10 @@ npx bis -h
 #                        This option does not support the --staged flag.
 ```
 
+## Commit linting
+
+`npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'`
+
 # Bounce project recommendations
 
 ### VSCode

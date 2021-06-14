@@ -62,6 +62,9 @@ async function runCli() {
     'npx prettier --config ./node_modules/prettier-config-bouncedinc/index.json --write';
   const eslintCommand = `npx eslint -c ./node_modules/eslint-config-bouncedinc${eslintConfigSuffix}/index.js ${eslintFlags}`;
 
+  // commit mesasge validation
+  // npx commitlint --edit "$1"  --config ./node_modules/commitlint-config-bouncedinc/index.js
+
   if (isStagedChanges) {
     const success = await lintStaged({
       config: {

@@ -22,7 +22,10 @@
   },
   "homepage": "https://github.com/Bounced-Inc/bounce-in-style#readme",
   "dependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "arg": "^5.0.0",
+    "commitlint-config-bouncedinc": "^0.0.1",
     "eslint": "^7.27.0",
     "eslint-config-bouncedinc": "^0.0.10",
     "eslint-config-bouncedinc-react": "^0.0.17",
