@@ -106,5 +106,5 @@ We don't recommend extending the config when using internal to Bounce, instead a
 
 # What's next
 
-- [ ] Setup commit validator & changelog generator
+- [ ] Setup semantic versioning & changelog generator
 - [ ] Add [eslint-plugin-cypress](https://www.npmjs.com/package/eslint-plugin-cypress) to react config
