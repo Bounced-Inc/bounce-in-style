@@ -3,8 +3,10 @@ module.exports = {
   // extends: ['@react-native-community', 'eslint-config-bouncedinc-react'],
   extends: ['eslint-config-bouncedinc-react'],
   plugins: ['react-native', '@react-native-community'],
-  rules: {}
+  rules: {
+    'react/jsx-props-no-spreading': 'off',
+    // NOTE: circular dep ignore will be removed in the near future
+    'import/no-cycle': 'off'
+  }
   // env: {}
 };
-
-// TODO lint: update this with new version of other two packages, weve stopped maintaining until we finish setting up the react web configs
