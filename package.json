@@ -1,6 +1,6 @@
 {
   "name": "bounce-in-style",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "The Bounce style guide, formatter, and commit validator.",
   "main": "./dist/index.js",
   "bin": {
