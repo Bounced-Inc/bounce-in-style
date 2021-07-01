@@ -51,6 +51,7 @@ module.exports = {
     'prefer-const': 'error',
     'prefer-arrow-callback': 'error',
     'no-restricted-properties': 'error',
+    camelcase: ['error', { properties: 'never', ignoreDestructuring: true }],
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     // TODO: this would be nice to tighten up
