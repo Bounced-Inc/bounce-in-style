@@ -77,7 +77,11 @@ module.exports = {
       // "extends": ["plugin:jest/recommended"] // Can't extend in overrides: https://github.com/eslint/eslint/issues/8813
       plugins: ['jest'],
       rules: {
-        'jest/no-disabled-tests': 'warn'
+        'jest/no-disabled-tests': 'warn',
+        'import/no-extraneous-dependencies': [
+          'error',
+          { devDependencies: true }
+        ]
       }
     }
   ]
