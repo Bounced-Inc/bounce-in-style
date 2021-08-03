@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bouncedinc-react-native",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "The Bounce ESLint config for React Native Typescript projects",
   "main": "index.js",
   "scripts": {},
@@ -8,7 +8,7 @@
   "license": "ISC",
   "dependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
-    "eslint-config-bouncedinc-react": "^0.0.18"
+    "eslint-config-bouncedinc-react": "^0.0.19"
   },
   "peerDependencies": {
     "eslint": ">= 7",
