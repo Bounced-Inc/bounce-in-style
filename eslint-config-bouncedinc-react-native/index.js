@@ -9,6 +9,8 @@ module.exports = {
     'import/no-cycle': 'off',
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }]
+  },
+  env: {
+    'react-native/react-native': true
   }
-  // env: {}
 };
