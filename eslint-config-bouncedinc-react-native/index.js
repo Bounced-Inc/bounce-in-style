@@ -11,6 +11,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }]
   },
   env: {
+    // NOTE: we may need to disable `browser` env from the eslint-config-bouncedinc-react package
     'react-native/react-native': true
   }
 };
