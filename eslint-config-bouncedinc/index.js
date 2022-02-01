@@ -11,7 +11,7 @@ module.exports = {
   ],
   rules: {
     quotes: 'off',
-    curly: 'error',
+    curly: ['error', 'all'],
     eqeqeq: 'error',
     'no-var': 'error',
     'comma-dangle': 'off',
