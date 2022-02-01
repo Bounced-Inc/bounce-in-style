@@ -54,8 +54,7 @@ module.exports = {
     camelcase: ['error', { properties: 'never', ignoreDestructuring: true }],
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    // TODO: this would be nice to tighten up
-    'brace-style': 'off',
+    'brace-style': ['error', '1tbs', { allowSingleLine: false }],
     // TODO: we should try to move `any` to `unknown`
     '@typescript-eslint/no-explicit-any': 'off',
     // TODO: we should remove this / only use it for isNaN
