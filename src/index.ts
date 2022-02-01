@@ -51,8 +51,11 @@ async function runCli() {
   }
 
   let eslintConfigSuffix = '';
-  if (isReactNative) eslintConfigSuffix += '-react-native';
-  else if (isReact) eslintConfigSuffix += '-react';
+  if (isReactNative) {
+    eslintConfigSuffix += '-react-native';
+  } else if (isReact) {
+    eslintConfigSuffix += '-react';
+  }
 
   const eslintFlags = `${
     isCheck ? '' : '--fix'
