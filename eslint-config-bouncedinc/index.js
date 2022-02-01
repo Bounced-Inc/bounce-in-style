@@ -11,6 +11,7 @@ module.exports = {
   ],
   rules: {
     quotes: 'off',
+    curly: 'error',
     eqeqeq: 'error',
     'no-var': 'error',
     'comma-dangle': 'off',
@@ -30,7 +31,6 @@ module.exports = {
     radix: 'off',
     'class-methods-use-this': 'off',
     'no-plusplus': 'off',
-    curly: 'off',
     'prefer-destructuring': 'off',
 
     // handled by @typescript-eslint
