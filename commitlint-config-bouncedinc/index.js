@@ -8,14 +8,15 @@ module.exports = {
       [
         'feat',
         'fix',
+        'perf',
         'docs',
         'style',
         'types',
         'refactor',
         'test',
-        'build'
-        // 'chore',
-        // 'ci',
+        'build',
+        'chore',
+        'ci'
       ]
     ]
   }
