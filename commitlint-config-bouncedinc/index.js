@@ -18,6 +18,7 @@ module.exports = {
         'chore',
         'ci'
       ]
-    ]
+    ],
+    'footer-max-line-length': [2, 'always', Infinity]
   }
 };
