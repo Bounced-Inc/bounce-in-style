@@ -19,6 +19,7 @@ module.exports = {
         'ci'
       ]
     ],
+    'body-max-line-length': [2, 'always', Infinity],
     'footer-max-line-length': [2, 'always', Infinity]
   }
 };
